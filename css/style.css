@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --claro: #f2f4f4;
+    --primary: #302d30;
+    --secondary: #dadbdb;
+    --acent1: #cad401;
+    --trans: rgba(66 148 30 / 0.5);
+    --tipo1: "Oswald", sans-serif;
+    --tipo2: "Montserrat", sans-serif;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    font-family: var(--tipo1);
+}
+
+header {
+    background-color: var(--claro);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header>div {
+    width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    column-gap: 1rem;
+    list-style-type: none;
+    font: 700;
+
+}
+
+
+#menu {
+    display: none;
+}
+
+header nav a,
+header nav a:link {
+    display: block;
+    text-transform: uppercase;
+    color: var(--acent1);
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+header nav a:hover {
+    color: var(--primary);
+    background-color: var(--acent1);
+}
+
+#hero {
+    background-image: url(../img/empresa-tecnologica_hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    height: 70vh;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #000000;
+    font-size: 4rem;
+    position: absolute;
+    top: 77%;
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+
+.mover {
+    opacity: 1;
+    position: relative;
+    top: 0;
+}
+
+main section:nth-child(2) {
+    background-color: var(--secondary);
+    height: 100vh;
+    padding: 2rem;
+}
+
+main section:nth-child(2)>div {
+    width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+article {
+    width: 32%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: var(--claro);
+
+}
+
+#servicios div div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+h2 {
+    text-align: left;
+    font-size: 3rem;
+}
+
+article h3 {
+    font-size: 2rem;
+}
+
+article p a {
+    padding: 1rem;
+    color: var(--acent1);
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    transition: all 0.7s ease;
+}
+
+article p a:hover {
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+.serviciouno,
+.serviciodos,
+.serviciotres {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.visible {
+    display: block;
+}
+
+main section:nth-child(3) {
+    background-color: #FFFFFF;
+    padding: 8rem;
+}
+
+main section:nth-child(3)>div {
+    width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+main section:nth-child(3) h3 {
+    font-size: 4rem;
+}
+
+#flexible div p {
+    background-color: #a0c98ebd;
+    position: absolute;
+    width: 40%;
+    height: auto;
+    padding: 1rem;
+    left: 15%;
+}
+
+
+#flexible div div img {
+    width: 50%;
+}
+#flexible>div {
+    display: flex;
+    align-items: center;
+}
+#flexible div div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+}
+#paralax {
+    position: relative;
+        z-index: 0;
+
+}
+#paralax::before {
+    content: '';
+    background-image: url(../img/parallax.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -111;
+}
+
+section {
+    z-index: 111;
+    position: relative;
+}
+
+#paralax>div {
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#paralax div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15%;
+transition: transform 2s ease;
+
+}
+
+#paralax article:nth-child(1) {
+    margin-left: 7.5%;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.izquierda, .derecha {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.izquierda:hover, .derecha:hover {
+    color: rgb(230, 215, 18);
+}
+
+.izquierda {
+    top: 40%;
+    left: 2%;
+    font-size: 3rem;
+}
+
+.derecha {
+    top: 40%;
+    right: 2%;
+    font-size: 3rem;
+}
+
+#paralax article {
+    width: 85%;
+    height: auto;
+    background-color: var(--claro);
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 85%;
+    transition: all 0.8s ease;
+}
+
+#paralax h2 {
+    color: var(--claro);
+    text-align: center;
+}
+
+
+
+#paralax img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+
+#contacto {
+    background-color: var(--secondary);
+    height: 100vh;
+    padding: 3rem;
+}
+
+
+
+#contacto h3 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#contacto>div {
+    display: flex;
+    width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
+    column-gap: 1rem;
+
+}
+
+#contacto>div>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    background-color: #800080;
+    width: 90%;
+    height: 30%;
+    padding: 1rem;
+}
+
+#contacto div div:nth-child(2) {
+    width: 70%;
+
+}
+
+#contacto div p a {
+    color: var(--acent1);
+}
+
+#contacto div p a:hover {
+    color: var(--claro);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+button {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+
+}
+
+input {
+    padding: 0.5rem;
+    margin: 0.25rem 0.25rem 1rem 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.25rem 0.25rem 1rem 0.25rem;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="submit"] {
+    width: auto;
+}
+
+label,
+span {
+    font-weight: 700;
+}
+
+
+footer {
+    background-color: var(--primary);
+    z-index: 11;
+    position: relative;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    column-gap: 1rem;
+    list-style-type: none;
+    font: 700;
+
+}
+
+
+footer nav a,
+footer nav a:link {
+    display: block;
+    color: var(--acent1);
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+}
+
+footer nav a:hover {
+    color: var(--primary);
+    background-color: var(--acent1);
+}
+
+@media screen and (max-width:780px) {
+
+    #menu {
+        display: block;
+        position: absolute;
+        right: 1%;
+        top: 78%;
+        z-index: 111;
+    }
+
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0%;
+        right: 0%;
+        background-color: rgba(128, 128, 128, 0.466);
+        justify-content: center;
+        row-gap: 2rem;
+        z-index: 11;
+
+    }
+
+    #flexible div p {
+        font-size: 0.8rem;
+    }
+
+    #contacto>div {
+        row-gap: 2rem;
+    }
+
+    #contacto>div {
+        flex-direction: column;
+    }
+
+    #servicios div div {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    article {
+        width: 90%;
+    }
+
+    article:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+    }
+
+    main section:nth-child(2) {
+        height: auto;
+    }
+
+    #flexible div div img {
+        width: 100%;
+    }
+
+    #flexible div p {
+        width: 38%;
+        height: auto;
+        padding: 1rem;
+        right: 50%;
+        top: 78%;
+    }
+
+    #contacto>div>div:nth-child(1) {
+        width: 70%;
+        padding: 2rem;
+    }
+
+    header nav a:hover {
+        transform: scale(1.1);
+    }
+
+    .serviciouno,
+    .serviciodos,
+    .serviciotres {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.774);
+        z-index: 100;
+        padding-top: 13rem;
+        color: var(--acent1);
+    }
+
+    .serviciouno h3,
+    .serviciodos h3,
+    .serviciotres h3 {
+        font-size: 4rem;
+    }
+
+    .serviciouno p,
+    .serviciodos p,
+    .serviciotres p {
+        font-size: 2rem;
+    }
+
+
+
+
+
+}
